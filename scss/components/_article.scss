@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+
+$mapaDeImagenes: (
+  "1": "../../static/src/img/vauxoo-img1.webp",
+  "2": "../../static/src/img/vauxoo-img2.webp",
+  "3": "../../static/src/img/vauxoo-img3.webp"
+);
+
+.article{
+  @each $clave, $valor in $mapaDeImagenes{
+    &-cover#{$clave}{
+      @include mix.background-image($valor);
+      height: func.calculateRem(160px);
+      color: var.$white;
+    }
+  }
+
+  &-title{
+    font-size: func.calculateRem(14px);
+    font-weight: 500;
+  }
+
+  &-paragraph{
+    font-size: func.calculateRem(12px);
+    font-weight: 400;
+  }
+
+  &-tags{
+    gap: func.calculateRem(4px);
+  }
+
+  &-tag{
+    font-size: func.calculateRem(12px);
+    font-weight: 700;
+    color: var.$red;
+    background-color: var.$white;
+    padding: 3px 4.8px;
+    border: 1px solid rgba(168, 168, 168, 0.5);
+    height: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-info > &-date{
+    font-size: func.calculateRem(10px);
+    font-weight: 700;
+    color: var.$gray
+  }
+
+  &-info > &-type{
+    color: var.$red;
+    font-size: func.calculateRem(10px);
+  }
+}
