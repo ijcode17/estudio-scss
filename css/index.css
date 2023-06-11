@@ -1,3 +1,52 @@
+.header {
+  background-image: url("../../static/src/img/vauxoo-img1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 20rem;
+  color: #ffffff;
+}
+.header > .container {
+  gap: 0.8rem;
+}
+.header-badge {
+  background-color: #e83e8c;
+  font-size: 2rem;
+}
+.header-title {
+  font-size: calc(1.475rem + 2.7vw);
+  font-weight: 300;
+}
+.header-paragraph {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
 
+.nav-item a {
+  color: #c4033c;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.nav-item a.bold {
+  font-weight: bold;
+}
+.nav-item.language {
+  display: flex;
+  align-items: center;
+}
+.nav-item.language > .nav-line {
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.nav-item.language > a.black {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+* {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+}
 
 /*# sourceMappingURL=index.css.map */

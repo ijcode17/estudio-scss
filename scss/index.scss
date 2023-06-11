@@ -1,1 +1,8 @@
 @use './abstracts/variables' as var;
+@use './abstracts/mixins' as mix;
+@use './components/header';
+@use './components/navbar';
+
+*{
+  @include mix.font(400);
+}

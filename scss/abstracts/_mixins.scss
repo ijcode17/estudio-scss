@@ -1,0 +1,13 @@
+@mixin font($weight: 400){
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin background-image($url, $repeat: no-repeat, $size:cover, $position: center){
+  background: {
+    image: url($url);
+    repeat: $repeat;
+    size: $size;
+    position: $position;
+  };
+}
