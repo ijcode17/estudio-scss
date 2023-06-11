@@ -55,6 +55,16 @@
   font-size: 0.625rem;
 }
 
+.blogs-concept:hover {
+  color: rgba(0, 0, 0, 0.9);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.blogs-concept:active {
+  transform: scale(0.9);
+  transition: transform 0.2s ease-in-out;
+}
+
 .blogs {
   display: flex;
   justify-content: center;
@@ -75,6 +85,7 @@
 }
 .blogs-concept {
   font-weight: 700;
+  cursor: pointer;
 }
 .blogs-concept.bold {
   color: rgba(0, 0, 0, 0.9);

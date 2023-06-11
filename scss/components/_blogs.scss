@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mix;
 @use '../abstracts/functions' as func;
+@use '../abstracts/placeholders' as place;
 
 $tipoDisplay: flex;
 $gutter: func.calculateRem(24px);
@@ -25,8 +26,17 @@ $gutter: func.calculateRem(24px);
 
   &-concept{
     font-weight: 700;
+    cursor: pointer;
     &.bold{
       color: var.$black;
+    }
+
+    &:hover{
+      @extend %change-color;
+    }
+
+    &:active{
+      @extend %change-scale;
     }
   }
 
