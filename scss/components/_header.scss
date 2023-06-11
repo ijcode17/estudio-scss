@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+
+.header{
+  @include mix.background-image('../../static/src/img/vauxoo-img1.webp');
+  height: 20rem;
+  color: var.$white;
+  > .container{
+    gap: .8rem;
+  }
+  &-badge{
+    background-color: var.$pink;
+    font-size: 2rem;
+  }
+  &-title{
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+  }
+  &-paragraph{
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}

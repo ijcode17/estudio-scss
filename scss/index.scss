@@ -1,0 +1,11 @@
+@use './abstracts/variables' as var;
+@use './abstracts/mixins' as mix;
+@use './abstracts/functions' as func;
+@use './components/article';
+@use './components/blogs';
+@use './components/header';
+@use './components/navbar';
+
+*{
+  @include mix.font(400);
+}

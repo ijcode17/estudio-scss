@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as var;
+
+.nav-item{
+  a{
+    color: var.$red;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    &.bold{
+      font-weight: bold;
+    }
+  }
+  &.language{
+    display: flex;
+    align-items: center;
+    & > .nav-line{
+      display: block;
+      width: 1px;
+      height: 20px;
+      background-color: var.$black;
+    }
+    & > a.black{
+      color: var.$black;
+    }
+  }
+}

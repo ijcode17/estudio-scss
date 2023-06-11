@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as func;
+@use '../abstracts/placeholders' as place;
+
+$tipoDisplay: flex;
+$gutter: func.calculateRem(24px);
+
+.blogs{
+  @if($tipoDisplay == flex){
+    @include mix.flex-center;
+    justify-content: space-around;
+    gap: $gutter;
+  }
+
+  &-text{
+    @include mix.flex-center;
+    gap: func.calculateRem(16px);
+  }
+
+  &-title, &-concept{
+    margin: 0;
+    font-size: func.calculateRem(14px);
+    color: var.$gray;
+  }
+
+  &-concept{
+    font-weight: 700;
+    cursor: pointer;
+    &.bold{
+      color: var.$black;
+    }
+
+    &:hover{
+      @extend %change-color;
+    }
+
+    &:active{
+      @extend %change-scale;
+    }
+  }
+
+  &-cta{
+    background-color: var.$red;
+    display: inline-block;
+    width: func.calculateRem(24px);
+    margin-left: func.calculateRem(-14px);
+  }
+}
